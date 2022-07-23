@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EDBABB975FE5368BE0D139D /* Pods_SesacDamagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE763040C20BE3FE5B8C30D /* Pods_SesacDamagochi.framework */; };
+		A22F7A39288C2D4700214EA3 /* rabbit-hatching.json in Resources */ = {isa = PBXBuildFile; fileRef = A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */; };
 		A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E14288C1CA0009EBB4F /* Damagochi.swift */; };
 		A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E16288C2169009EBB4F /* UIColor+Extension.swift */; };
 		A2592E1B288C2451009EBB4F /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E1A288C2451009EBB4F /* Dialogue.swift */; };
+		A2592E21288C2860009EBB4F /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = A2592E20288C2860009EBB4F /* Toast */; };
+		A2592E24288C2889009EBB4F /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = A2592E23288C2889009EBB4F /* TextFieldEffects */; };
 		A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */; };
 		A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */; };
 		A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */; };
@@ -19,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A01D87A96D83739D890E04F /* Pods-SesacDamagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SesacDamagochi.release.xcconfig"; path = "Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi.release.xcconfig"; sourceTree = "<group>"; };
+		477E6293A10B9C6762AD82AB /* Pods-SesacDamagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SesacDamagochi.debug.xcconfig"; path = "Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi.debug.xcconfig"; sourceTree = "<group>"; };
+		A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rabbit-hatching.json"; sourceTree = "<group>"; };
 		A2592E14288C1CA0009EBB4F /* Damagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damagochi.swift; sourceTree = "<group>"; };
 		A2592E16288C2169009EBB4F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A2592E1A288C2451009EBB4F /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
@@ -30,6 +37,7 @@
 		A2CFAA81288A8A9900FBEC52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CFAA84288A8A9900FBEC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CFAA86288A8A9900FBEC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE763040C20BE3FE5B8C30D /* Pods_SesacDamagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SesacDamagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,12 +45,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2592E24288C2889009EBB4F /* TextFieldEffects in Frameworks */,
+				A2592E21288C2860009EBB4F /* Toast in Frameworks */,
+				1EDBABB975FE5368BE0D139D /* Pods_SesacDamagochi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72A05C66EBAE7E03ECAB3235 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				477E6293A10B9C6762AD82AB /* Pods-SesacDamagochi.debug.xcconfig */,
+				2A01D87A96D83739D890E04F /* Pods-SesacDamagochi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A2592E13288C1C8A009EBB4F /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +94,8 @@
 			children = (
 				A2CFAA77288A8A9800FBEC52 /* SesacDamagochi */,
 				A2CFAA76288A8A9800FBEC52 /* Products */,
+				72A05C66EBAE7E03ECAB3235 /* Pods */,
+				D6ABF105F6CEF93EB6FB80F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +110,7 @@
 		A2CFAA77288A8A9800FBEC52 /* SesacDamagochi */ = {
 			isa = PBXGroup;
 			children = (
+				A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */,
 				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
@@ -100,6 +123,14 @@
 			path = SesacDamagochi;
 			sourceTree = "<group>";
 		};
+		D6ABF105F6CEF93EB6FB80F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDE763040C20BE3FE5B8C30D /* Pods_SesacDamagochi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,15 +138,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CFAA89288A8A9900FBEC52 /* Build configuration list for PBXNativeTarget "SesacDamagochi" */;
 			buildPhases = (
+				5CBA53CD03F543D6A66910B4 /* [CP] Check Pods Manifest.lock */,
 				A2CFAA71288A8A9800FBEC52 /* Sources */,
 				A2CFAA72288A8A9800FBEC52 /* Frameworks */,
 				A2CFAA73288A8A9800FBEC52 /* Resources */,
+				DB91CD51776F4DA4A24B023D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SesacDamagochi;
+			packageProductDependencies = (
+				A2592E20288C2860009EBB4F /* Toast */,
+				A2592E23288C2889009EBB4F /* TextFieldEffects */,
+			);
 			productName = SesacDamagochi;
 			productReference = A2CFAA75288A8A9800FBEC52 /* SesacDamagochi.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +181,10 @@
 				Base,
 			);
 			mainGroup = A2CFAA6C288A8A9800FBEC52;
+			packageReferences = (
+				A2592E1F288C2860009EBB4F /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				A2592E22288C2889009EBB4F /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = A2CFAA76288A8A9800FBEC52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22F7A39288C2D4700214EA3 /* rabbit-hatching.json in Resources */,
 				A2CFAA85288A8A9900FBEC52 /* LaunchScreen.storyboard in Resources */,
 				A2CFAA82288A8A9900FBEC52 /* Assets.xcassets in Resources */,
 				A2CFAA80288A8A9800FBEC52 /* Main.storyboard in Resources */,
@@ -165,6 +207,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CBA53CD03F543D6A66910B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SesacDamagochi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB91CD51776F4DA4A24B023D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2CFAA71288A8A9800FBEC52 /* Sources */ = {
@@ -318,6 +402,7 @@
 		};
 		A2CFAA8A288A8A9900FBEC52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 477E6293A10B9C6762AD82AB /* Pods-SesacDamagochi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,7 +412,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SesacDamagochi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -347,6 +432,7 @@
 		};
 		A2CFAA8B288A8A9900FBEC52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A01D87A96D83739D890E04F /* Pods-SesacDamagochi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,7 +442,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SesacDamagochi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -396,6 +482,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2592E1F288C2860009EBB4F /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A2592E22288C2889009EBB4F /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2592E20288C2860009EBB4F /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2592E1F288C2860009EBB4F /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		A2592E23288C2889009EBB4F /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2592E22288C2889009EBB4F /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2CFAA6D288A8A9800FBEC52 /* Project object */;
 }
