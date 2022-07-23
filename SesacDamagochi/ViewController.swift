@@ -5,6 +5,15 @@
 //  Created by Doy Kim on 2022/07/22.
 //
 
+/*
+ 
+ Lottie를 이용한 Launch Screen
+ 참고링크 : https://lottiefiles.com/blog/working-with-lottie/how-to-add-lottie-animation-ios-app-swift
+ 
+ */
+
+
+
 import UIKit
 import Lottie
 
