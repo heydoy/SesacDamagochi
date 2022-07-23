@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E14288C1CA0009EBB4F /* Damagochi.swift */; };
 		A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */; };
 		A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */; };
 		A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2592E14288C1CA0009EBB4F /* Damagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damagochi.swift; sourceTree = "<group>"; };
 		A2CFAA75288A8A9800FBEC52 /* SesacDamagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacDamagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2592E13288C1C8A009EBB4F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */,
+				A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		A2CFAA6C288A8A9800FBEC52 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +67,10 @@
 		A2CFAA77288A8A9800FBEC52 /* SesacDamagochi */ = {
 			isa = PBXGroup;
 			children = (
-				A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */,
-				A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */,
+				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
+				A2592E14288C1CA0009EBB4F /* Damagochi.swift */,
 				A2CFAA81288A8A9900FBEC52 /* Assets.xcassets */,
 				A2CFAA83288A8A9900FBEC52 /* LaunchScreen.storyboard */,
 				A2CFAA86288A8A9900FBEC52 /* Info.plist */,
@@ -141,6 +152,7 @@
 				A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */,
 				A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */,
 				A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */,
+				A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
