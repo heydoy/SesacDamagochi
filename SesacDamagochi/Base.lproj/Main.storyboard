@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cSu-sg-YNx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6MS-lv-pKj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -481,6 +481,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vK-DI-Glg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2126" y="801"/>
+        </scene>
+        <!--Name Edit View Controller-->
+        <scene sceneID="QBK-cc-6eK">
+            <objects>
+                <viewController storyboardIdentifier="NameEditViewController" id="6MS-lv-pKj" customClass="NameEditViewController" customModule="SesacDamagochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8WW-pm-MBq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmc-lP-RLb">
+                                <rect key="frame" x="31" y="76" width="352" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="8kc-4V-7kc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="userTextFieldEditingChanged:" destination="6MS-lv-pKj" eventType="editingChanged" id="Lxv-ra-UcZ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f9z-vy-5Ia"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rmc-lP-RLb" firstAttribute="centerX" secondItem="f9z-vy-5Ia" secondAttribute="centerX" id="Mzs-fT-N5g"/>
+                            <constraint firstItem="rmc-lP-RLb" firstAttribute="top" secondItem="f9z-vy-5Ia" secondAttribute="top" constant="32" id="d0i-Rm-IkV"/>
+                            <constraint firstItem="rmc-lP-RLb" firstAttribute="width" secondItem="8WW-pm-MBq" secondAttribute="width" multiplier="0.85" id="nfm-wF-2Tn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userTextField" destination="rmc-lP-RLb" id="snw-OH-Vie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLh-p0-6iT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2950.7246376811595" y="800.89285714285711"/>
         </scene>
     </scenes>
     <designables>

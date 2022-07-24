@@ -19,6 +19,7 @@
 		A2722E77288D231B00971886 /* DamagochiMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E76288D231B00971886 /* DamagochiMainViewController.swift */; };
 		A2722E79288D68D000971886 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E78288D68D000971886 /* UITextField+Extension.swift */; };
 		A2722E7B288D9DA900971886 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E7A288D9DA900971886 /* SettingTableViewController.swift */; };
+		A2722E7D288DA16A00971886 /* NameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E7C288DA16A00971886 /* NameEditViewController.swift */; };
 		A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */; };
 		A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */; };
 		A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		A2722E76288D231B00971886 /* DamagochiMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagochiMainViewController.swift; sourceTree = "<group>"; };
 		A2722E78288D68D000971886 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		A2722E7A288D9DA900971886 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		A2722E7C288DA16A00971886 /* NameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEditViewController.swift; sourceTree = "<group>"; };
 		A2CFAA75288A8A9800FBEC52 /* SesacDamagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacDamagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
+				A2722E7C288DA16A00971886 /* NameEditViewController.swift */,
 				A2722E7A288D9DA900971886 /* SettingTableViewController.swift */,
 				A2722E76288D231B00971886 /* DamagochiMainViewController.swift */,
 				A2FA41B1288D1F150065656B /* DetailPopupViewController.swift */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2722E7B288D9DA900971886 /* SettingTableViewController.swift in Sources */,
+				A2722E7D288DA16A00971886 /* NameEditViewController.swift in Sources */,
 				A2130379288CF74C0022683C /* SelectCollectionViewCell.swift in Sources */,
 				A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */,
 				A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */,
