@@ -11,11 +11,18 @@ import UIKit
 class SeclectCollectionViewController: UICollectionViewController {
     // MARK: - Properties
     static let identifier = "SeclectCollectionViewController"
-
+    
+    var damagochis = Damagochis()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        configure()
+        
+        // 네비게이션 컨트롤러 설정
+        self.navigationItem.title = "다마고치 선택하기"
 
     }
     
@@ -47,11 +54,30 @@ class SeclectCollectionViewController: UICollectionViewController {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectCollectionViewCell.identifier, for: indexPath) as? SelectCollectionViewCell else { return UICollectionViewCell() }
         
+
+        cell.configure(indexPath.item)
+        
         return cell
     }
     
-   
-    
+    // - 셀을 선택했을 때
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 팝업 띄우기
+        print(indexPath.item)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: DetailPopupViewController.identifier) as! DetailPopupViewController
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        vc.modalTransitionStyle = .crossDissolve
+        
+        self.present(vc, animated: true, completion: nil)
+        
+        
+    }
+
 }
 
 

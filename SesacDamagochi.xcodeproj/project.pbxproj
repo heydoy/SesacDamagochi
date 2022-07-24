@@ -22,6 +22,7 @@
 		A2CFAA80288A8A9800FBEC52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */; };
 		A2CFAA82288A8A9900FBEC52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CFAA81288A8A9900FBEC52 /* Assets.xcassets */; };
 		A2CFAA85288A8A9900FBEC52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CFAA83288A8A9900FBEC52 /* LaunchScreen.storyboard */; };
+		A2FA41B2288D1F150065656B /* DetailPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA41B1288D1F150065656B /* DetailPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A2CFAA81288A8A9900FBEC52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CFAA84288A8A9900FBEC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CFAA86288A8A9900FBEC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2FA41B1288D1F150065656B /* DetailPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPopupViewController.swift; sourceTree = "<group>"; };
 		CDE763040C20BE3FE5B8C30D /* Pods_SesacDamagochi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SesacDamagochi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
+				A2FA41B1288D1F150065656B /* DetailPopupViewController.swift */,
 				A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */,
 				A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */,
 				A2592E19288C240E009EBB4F /* Data */,
@@ -269,6 +272,7 @@
 				A2130377288CF71F0022683C /* SeclectCollectionViewController.swift in Sources */,
 				A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */,
 				A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */,
+				A2FA41B2288D1F150065656B /* DetailPopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
