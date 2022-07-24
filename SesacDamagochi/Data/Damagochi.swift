@@ -7,11 +7,11 @@
 
 import UIKit
 
+// 다마고치 공통 구조체
 struct Damagochi {
     let id: Int // 다마고치 아이디는 1,2,3, 없는 애들은 다른 숫자로
     let name: String
     let overview: String
-    
     
     var rice: Int
     var water: Int
@@ -43,4 +43,32 @@ struct Damagochi {
     }
 }
 
-
+// 다마고치 모음
+struct Damagochis {
+    var items: [Damagochi] = [
+        Damagochi(
+            id: 1,
+            name: "따끔따끔 다마고치",
+            overview: "저는 선인장 다마고치에요. 키는 150cm, 몸무게는 30kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
+            rice: 0,
+            water: 0),
+        Damagochi(
+            id: 2,
+            name: "방실방실 다마고치",
+            overview: "저는 햇님 다마고치에요. 키는 300cm, 몸무게는 130kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
+            rice: 0,
+            water: 0),
+        Damagochi(
+            id: 3,
+            name: "방실방실 다마고치",
+            overview: "저는 튤립 다마고치에요. 키는 120cm, 몸무게는 40kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
+            rice: 0,
+            water: 0),
+        Damagochi(
+            id: 4,
+            name: "준비중이에요",
+            overview: "",
+            rice: 0,
+            water: 0)
+    ]
+}
