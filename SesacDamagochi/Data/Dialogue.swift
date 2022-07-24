@@ -10,8 +10,9 @@
    링크 : https://programming-quotes-api.herokuapp.com/quotes
 */
 
+import Alamofire
+
 struct Dialogues: Codable {
-    
     
     let dialogue: [Dialogue]
 }
@@ -21,3 +22,4 @@ struct Dialogue: Codable {
     let author: String
     let en: String
 }
+

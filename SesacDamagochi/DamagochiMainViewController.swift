@@ -7,10 +7,12 @@
 
 import UIKit
 import Toast
+import Alamofire
 
 class DamagochiMainViewController: UIViewController {
     // MARK: - Properties
     static let identifier = "DamagochiMainViewController"
+    var dialogues: [Dialogue]?
     
     let selected = UserDefaultsManager.SelectedDamagochiId - 1
     
@@ -32,20 +34,37 @@ class DamagochiMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.fetchResult ( completionHandler: {[weak self] result in
+            guard let self = self else { return } // 일시적으로 self가 strong reference로 만들게 하는 작업
+               switch result {
+               case let .success(result) :
+                   debugPrint("success \(result)")
+                   self.dialogues = result
+                   
+               case let .failure(error) :
+                   debugPrint("error \(error)")
+           }
+            
+        })
+        
+        
        // 네비게이션 속성
         navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
         navigationItem.backButtonTitle = ""
         
         // 화면 디자인
+        
         configure()
         dataConfig()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
+        view.layoutIfNeeded()
     }
     
     // MARK: - Actions
@@ -193,8 +212,44 @@ class DamagochiMainViewController: UIViewController {
         imageView.image = UIImage(named: damagochi[selected].image)
         titleLabel.text = damagochi[selected].name
         statusLabel.text = "LV \(damagochi[selected].level) · 밥알 \(damagochi[selected].rice)개 · 물방울 \(damagochi[selected].water)개"
-
+        
+        // 글자를 느리게 가져오는 문제 
+        if let line = dialogues?.randomElement() {
+            print(line)
+            dialogueLabel.text = "\(line.en) - \(line.author)"
+            
+        }
+        
     }
+    
+    // 검색
+    func fetchResult( completionHandler: @escaping (Result<[Dialogue], Error>)-> Void ) {
+        let url = "https://programming-quotes-api.herokuapp.com/quotes"
+
+        
+        AF.request(url, method: .get)
+        
+        .responseData(completionHandler: { response in
+            switch response.result {
+            case let .success(data) :
+                do {
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode([Dialogue].self, from: data)
+                    completionHandler(.success(result))
+                    
+                } catch {
+                    completionHandler(.failure(error))
+                }
+            case let .failure(error) :
+                completionHandler(.failure(error))
+            }
+
+        })
+    }
+
+
+
+
 
 
 }
