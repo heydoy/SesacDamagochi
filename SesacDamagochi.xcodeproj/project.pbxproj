@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1EDBABB975FE5368BE0D139D /* Pods_SesacDamagochi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE763040C20BE3FE5B8C30D /* Pods_SesacDamagochi.framework */; };
+		A2130377288CF71F0022683C /* SeclectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */; };
+		A2130379288CF74C0022683C /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */; };
 		A22F7A39288C2D4700214EA3 /* rabbit-hatching.json in Resources */ = {isa = PBXBuildFile; fileRef = A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */; };
 		A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E14288C1CA0009EBB4F /* Damagochi.swift */; };
 		A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E16288C2169009EBB4F /* UIColor+Extension.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		2A01D87A96D83739D890E04F /* Pods-SesacDamagochi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SesacDamagochi.release.xcconfig"; path = "Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi.release.xcconfig"; sourceTree = "<group>"; };
 		477E6293A10B9C6762AD82AB /* Pods-SesacDamagochi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SesacDamagochi.debug.xcconfig"; path = "Target Support Files/Pods-SesacDamagochi/Pods-SesacDamagochi.debug.xcconfig"; sourceTree = "<group>"; };
+		A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeclectCollectionViewController.swift; sourceTree = "<group>"; };
+		A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rabbit-hatching.json"; sourceTree = "<group>"; };
 		A2592E14288C1CA0009EBB4F /* Damagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damagochi.swift; sourceTree = "<group>"; };
 		A2592E16288C2169009EBB4F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
+				A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */,
+				A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */,
 				A2592E19288C240E009EBB4F /* Data */,
 				A2592E18288C2177009EBB4F /* Extension */,
 				A2CFAA81288A8A9900FBEC52 /* Assets.xcassets */,
@@ -255,10 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2130379288CF74C0022683C /* SelectCollectionViewCell.swift in Sources */,
 				A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */,
 				A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */,
 				A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */,
 				A2592E1B288C2451009EBB4F /* Dialogue.swift in Sources */,
+				A2130377288CF71F0022683C /* SeclectCollectionViewController.swift in Sources */,
 				A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */,
 				A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */,
 			);
