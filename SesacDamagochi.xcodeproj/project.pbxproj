@@ -22,6 +22,7 @@
 		A2722E7D288DA16A00971886 /* NameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E7C288DA16A00971886 /* NameEditViewController.swift */; };
 		A2722E7F288DA46B00971886 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E7E288DA46B00971886 /* CongratsViewController.swift */; };
 		A2722E81288DA6F900971886 /* congrats.json in Resources */ = {isa = PBXBuildFile; fileRef = A2722E80288DA6F900971886 /* congrats.json */; };
+		A2722E83288DAB5800971886 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E82288DAB5800971886 /* UserDefaultsManager.swift */; };
 		A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */; };
 		A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */; };
 		A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		A2722E7C288DA16A00971886 /* NameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameEditViewController.swift; sourceTree = "<group>"; };
 		A2722E7E288DA46B00971886 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		A2722E80288DA6F900971886 /* congrats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congrats.json; sourceTree = "<group>"; };
+		A2722E82288DAB5800971886 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A2CFAA75288A8A9800FBEC52 /* SesacDamagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacDamagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				A2592E14288C1CA0009EBB4F /* Damagochi.swift */,
 				A2592E1A288C2451009EBB4F /* Dialogue.swift */,
+				A2722E82288DAB5800971886 /* UserDefaultsManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				A2722E79288D68D000971886 /* UITextField+Extension.swift in Sources */,
 				A2130377288CF71F0022683C /* SeclectCollectionViewController.swift in Sources */,
 				A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */,
+				A2722E83288DAB5800971886 /* UserDefaultsManager.swift in Sources */,
 				A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */,
 				A2FA41B2288D1F150065656B /* DetailPopupViewController.swift in Sources */,
 				A2722E7F288DA46B00971886 /* CongratsViewController.swift in Sources */,

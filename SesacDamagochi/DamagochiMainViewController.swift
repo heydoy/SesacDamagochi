@@ -33,7 +33,7 @@ class DamagochiMainViewController: UIViewController {
 
        // 네비게이션 속성
         navigationItem.title = "\(bossName)님의 다마고치"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "person.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
         
         // 화면 디자인
         configure()

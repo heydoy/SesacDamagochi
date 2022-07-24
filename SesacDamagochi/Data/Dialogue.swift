@@ -11,11 +11,13 @@
 */
 
 struct Dialogues: Codable {
-    struct Dialogue: Codable {
-        let id: String
-        let author: String
-        let en: String
-    }
+    
     
     let dialogue: [Dialogue]
+}
+
+struct Dialogue: Codable {
+    let id: String
+    let author: String
+    let en: String
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 // 다마고치 공통 구조체
-struct Damagochi {
+struct Damagochi: Codable {
     let id: Int // 다마고치 아이디는 1,2,3, 없는 애들은 다른 숫자로
     let name: String
     let overview: String
@@ -44,7 +44,7 @@ struct Damagochi {
 }
 
 // 다마고치 모음
-struct Damagochis {
+struct Damagochis: Codable {
     var items: [Damagochi] = [
         Damagochi(
             id: 1,
