@@ -17,9 +17,10 @@ class SelectCollectionViewCell: UICollectionViewCell {
     
     
     // MARK: - Actions, Helper
-    func configure(_ indexPath: Int) {
+    func configure(_ damagochi: Damagochi) {
         // 디자인
-        
+        titleLabel.text = damagochi.name
+        imageView.image = UIImage(named: damagochi.thumnailImage)
     }
     
 }

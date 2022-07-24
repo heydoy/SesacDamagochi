@@ -47,9 +47,11 @@ class CongratsViewController: UIViewController {
     // MARK: - Helpers
     
     func configure() {
+        
+        self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+        
         popupView.layer.cornerRadius = 12
         
-        returnButton.backgroundColor = UIColor.DamagochiFontAndBorderColor
         returnButton.tintColor = .white
         returnButton.layer.cornerRadius = 12
         returnButton.clipsToBounds = true

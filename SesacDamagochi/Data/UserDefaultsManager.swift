@@ -11,14 +11,14 @@ import Foundation
 @propertyWrapper
 struct UserDefaultWrapper<T: Codable> {
     private let key: String
-    private let defaultValue: T?
+    private let defaultValue: T
 
-    init(key: String, defaultValue: T?) {
+    init(key: String, defaultValue: T) {
         self.key = key
         self.defaultValue = defaultValue
     }
     
-    var wrappedValue: T? {
+    var wrappedValue: T {
         get {
             if let savedData = UserDefaults.standard.object(forKey: key) as? Data {
                 let decoder = JSONDecoder()
@@ -38,10 +38,46 @@ struct UserDefaultWrapper<T: Codable> {
     
 }
 
+@propertyWrapper
+struct UserDefault<T> {
+    private let key: String
+    private let defaultValue: T
 
+    init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+
+    var wrappedValue: T {
+        get {
+            // Read value from UserDefaults
+            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
+        }
+        set {
+            // Set value to UserDefaults
+            UserDefaults.standard.set(newValue, forKey: key)
+        }
+    }
+}
 
 struct UserDefaultsManager {
     @UserDefaultWrapper(key: "damagochiList", defaultValue: Damagochis().items)
-    static var damagochiList: [Damagochi]?
+    static var damagochiList: [Damagochi]
+    
+    @UserDefault(key: "isDamagochiSelected", defaultValue: false)
+    static var isDamagochiSelected: Bool
+    
+    @UserDefault(key: "SelectedDamagochiID", defaultValue: 0)
+    static var SelectedDamagochiId: Int
+    
+    @UserDefault(key: "bossName", defaultValue: "대장님")
+    static var bossName: String
+}
 
+
+public func cleanCompleteStorage(){
+    if let bundleID = Bundle.main.bundleIdentifier {
+        UserDefaults.standard.removePersistentDomain(forName: bundleID)
+    }
+    
 }

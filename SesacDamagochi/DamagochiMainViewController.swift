@@ -11,7 +11,8 @@ import Toast
 class DamagochiMainViewController: UIViewController {
     // MARK: - Properties
     static let identifier = "DamagochiMainViewController"
-    let bossName = "대장" // 이름은 나중에 변경할 수 있어야함
+    
+    let selected = UserDefaultsManager.SelectedDamagochiId - 1
     
     // - Outlet
     @IBOutlet weak var imageView: UIImageView!
@@ -32,12 +33,19 @@ class DamagochiMainViewController: UIViewController {
         super.viewDidLoad()
 
        // 네비게이션 속성
-        navigationItem.title = "\(bossName)님의 다마고치"
+        navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
+        navigationItem.backButtonTitle = ""
         
         // 화면 디자인
         configure()
         dataConfig()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
     }
     
     // MARK: - Actions
@@ -58,17 +66,34 @@ class DamagochiMainViewController: UIViewController {
                 case riceTextField :
                     print(intText)
                     print("밥 욤욤")
+                    UserDefaultsManager.damagochiList[selected].rice += intText
+                    dataConfig()
                 case waterTextField:
                     print(intText)
                     print("물 욤욤")
+                    UserDefaultsManager.damagochiList[selected].water += intText
+                    dataConfig()
                 default:
                     fatalError("잘못됨")
+                }
+                
+                if UserDefaultsManager.damagochiList[selected].level == 10 {
+                    // 축하 팝업 띄우기
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: CongratsViewController.identifier) as! CongratsViewController
+                    
+                    vc.modalPresentationStyle = .overCurrentContext
+                    vc.modalTransitionStyle = .crossDissolve
+                    
+                    self.present(vc, animated: true)
+                    
                 }
             }
             
         } else {
             self.view.makeToast("숫자만 입력해주세요")
         }
+
     }
     
 
@@ -84,10 +109,7 @@ class DamagochiMainViewController: UIViewController {
         default :
             fatalError("잘못됨")
         }
-        
-        
-        self.view.setNeedsLayout()
-        self.view.layoutIfNeeded()
+
     }
 
     
@@ -164,10 +186,13 @@ class DamagochiMainViewController: UIViewController {
     }
     
     func dataConfig() {
+        
+        let damagochi = UserDefaultsManager.damagochiList
 
-        imageView.image = UIImage()
-        titleLabel.text = String()
-        statusLabel.text = "LV4 · 밥알 73개· 물방울 57개"
+
+        imageView.image = UIImage(named: damagochi[selected].image)
+        titleLabel.text = damagochi[selected].name
+        statusLabel.text = "LV \(damagochi[selected].level) · 밥알 \(damagochi[selected].rice)개 · 물방울 \(damagochi[selected].water)개"
 
     }
 

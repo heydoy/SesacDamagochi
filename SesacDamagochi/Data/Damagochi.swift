@@ -41,6 +41,13 @@ struct Damagochi: Codable {
         }
     
     }
+    var thumnailImage: String {
+        if (1...3).contains(id) {
+            return "\(id)-9"
+        } else {
+            return "noImage"
+        }
+    }
 }
 
 // 다마고치 모음
@@ -60,8 +67,8 @@ struct Damagochis: Codable {
             water: 0),
         Damagochi(
             id: 3,
-            name: "방실방실 다마고치",
-            overview: "저는 튤립 다마고치에요. 키는 120cm, 몸무게는 40kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
+            name: "반짝반짝 다마고치",
+            overview: "저는 별님 다마고치에요. 키는 120cm, 몸무게는 40kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
             rice: 0,
             water: 0),
         Damagochi(

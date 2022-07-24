@@ -19,9 +19,10 @@ import Lottie
 
 
 class ViewController: UIViewController {
+    
+    static let identifier = "LaunchScreen"
 
     @IBOutlet weak var viewForLottie: AnimationView!
-    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,18 +33,17 @@ class ViewController: UIViewController {
         viewForLottie.frame = self.view.bounds
         viewForLottie.center = self.view.center
         viewForLottie.contentMode = .scaleAspectFit
-        viewForLottie.loopMode = .repeatBackwards(1)
-        viewForLottie.animationSpeed = 0.9
+        viewForLottie.loopMode = .repeat(1)
+        viewForLottie.animationSpeed = 1.0
         
         viewForLottie.play { (finished) in
             print("애니메이션 끝")
             
             // 다마고치 선택했는지 여부 체크하기
             
-            if self.userDefaults.bool(forKey: "isDamagochiSelected") == true {
+            if UserDefaultsManager.isDamagochiSelected {
                 // 다마고치가 선택됐다면 메인 보여주기
                 self.concierge(DamagochiMainViewController.identifier)
-                
             } else {
                 // 다마고치를 선택한 적 없다면 선택화면 보여주기
                 self.concierge(SeclectCollectionViewController.identifier)

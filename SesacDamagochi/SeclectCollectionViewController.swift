@@ -6,33 +6,45 @@
 //
 
 import UIKit
+import Toast
 
 
 class SeclectCollectionViewController: UICollectionViewController {
     // MARK: - Properties
     static let identifier = "SeclectCollectionViewController"
     
-    var damagochis = Damagochis()
+    
+    //let damagochis = UserDefaultsManager.damagochiList
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         configure()
-        
-        // 네비게이션 컨트롤러 설정
-        self.navigationItem.title = "다마고치 선택하기"
-
     }
     
     // MARK: - Actions, Helpers
     
     func configure(){
+        
         self.view.backgroundColor = UIColor.DamagochiBackgroundColor
         
+        if UserDefaultsManager.isDamagochiSelected {
+            // 다마고치가 선택됐다면
+            // 네비게이션 컨트롤러 설정
+            self.navigationItem.title = "다마고치 변경하기"
+            
+        } else {
+            // 다마고치를 선택한 적 없다면
+            // 네비게이션 컨트롤러 설정
+            self.navigationItem.title = "다마고치 선택하기"
+        }
+
     }
     
+    func damagochiConfigure() {
+        
+    }
     
     
     
@@ -54,8 +66,12 @@ class SeclectCollectionViewController: UICollectionViewController {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectCollectionViewCell.identifier, for: indexPath) as? SelectCollectionViewCell else { return UICollectionViewCell() }
         
-
-        cell.configure(indexPath.item)
+        if (0...2).contains(indexPath.item)  {
+            cell.configure(UserDefaultsManager.damagochiList[indexPath.item])
+        } else {
+            cell.configure(UserDefaultsManager.damagochiList[3])
+        }
+        
         
         return cell
     }
@@ -65,16 +81,33 @@ class SeclectCollectionViewController: UICollectionViewController {
         // 팝업 띄우기
         print(indexPath.item)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(withIdentifier: DetailPopupViewController.identifier) as! DetailPopupViewController
-        
-        vc.modalPresentationStyle = .overCurrentContext
-        
-        vc.modalTransitionStyle = .crossDissolve
-        
-        self.present(vc, animated: true, completion: nil)
-        
+        if (0...2).contains(indexPath.row) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let vc = storyboard.instantiateViewController(withIdentifier: DetailPopupViewController.identifier) as! DetailPopupViewController
+            
+            vc.modalPresentationStyle = .overCurrentContext
+            
+            vc.modalTransitionStyle = .crossDissolve
+            
+            if UserDefaultsManager.isDamagochiSelected {
+                // 다마고치가 선택됐다면
+                vc.startButtonLabel = "변경하기"
+                
+            } else {
+                // 다마고치를 선택한 적 없다면
+                vc.startButtonLabel = "시작하기"
+            }
+            
+           
+            vc.damagochi = UserDefaultsManager.damagochiList[indexPath.item]
+            
+            
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            // 아직 준비중인 셀들
+            self.view.makeToast("아직 준비중이라 선택할 수 없어요")
+        }
         
     }
 
