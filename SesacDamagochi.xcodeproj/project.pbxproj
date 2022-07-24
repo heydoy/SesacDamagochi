@@ -16,6 +16,9 @@
 		A2592E1B288C2451009EBB4F /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E1A288C2451009EBB4F /* Dialogue.swift */; };
 		A2592E21288C2860009EBB4F /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = A2592E20288C2860009EBB4F /* Toast */; };
 		A2592E24288C2889009EBB4F /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = A2592E23288C2889009EBB4F /* TextFieldEffects */; };
+		A2722E77288D231B00971886 /* DamagochiMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E76288D231B00971886 /* DamagochiMainViewController.swift */; };
+		A2722E79288D68D000971886 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E78288D68D000971886 /* UITextField+Extension.swift */; };
+		A2722E7B288D9DA900971886 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2722E7A288D9DA900971886 /* SettingTableViewController.swift */; };
 		A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */; };
 		A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */; };
 		A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		A2592E14288C1CA0009EBB4F /* Damagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damagochi.swift; sourceTree = "<group>"; };
 		A2592E16288C2169009EBB4F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A2592E1A288C2451009EBB4F /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
+		A2722E76288D231B00971886 /* DamagochiMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagochiMainViewController.swift; sourceTree = "<group>"; };
+		A2722E78288D68D000971886 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		A2722E7A288D9DA900971886 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		A2CFAA75288A8A9800FBEC52 /* SesacDamagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacDamagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CFAA78288A8A9800FBEC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CFAA7A288A8A9800FBEC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A2592E16288C2169009EBB4F /* UIColor+Extension.swift */,
+				A2722E78288D68D000971886 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -120,6 +127,8 @@
 				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
+				A2722E7A288D9DA900971886 /* SettingTableViewController.swift */,
+				A2722E76288D231B00971886 /* DamagochiMainViewController.swift */,
 				A2FA41B1288D1F150065656B /* DetailPopupViewController.swift */,
 				A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */,
 				A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */,
@@ -264,11 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2722E7B288D9DA900971886 /* SettingTableViewController.swift in Sources */,
 				A2130379288CF74C0022683C /* SelectCollectionViewCell.swift in Sources */,
 				A2CFAA7D288A8A9800FBEC52 /* ViewController.swift in Sources */,
 				A2CFAA79288A8A9800FBEC52 /* AppDelegate.swift in Sources */,
+				A2722E77288D231B00971886 /* DamagochiMainViewController.swift in Sources */,
 				A2CFAA7B288A8A9800FBEC52 /* SceneDelegate.swift in Sources */,
 				A2592E1B288C2451009EBB4F /* Dialogue.swift in Sources */,
+				A2722E79288D68D000971886 /* UITextField+Extension.swift in Sources */,
 				A2130377288CF71F0022683C /* SeclectCollectionViewController.swift in Sources */,
 				A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */,
 				A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */,
