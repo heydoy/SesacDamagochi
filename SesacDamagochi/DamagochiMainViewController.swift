@@ -213,10 +213,11 @@ class DamagochiMainViewController: UIViewController {
         titleLabel.text = damagochi[selected].name
         statusLabel.text = "LV \(damagochi[selected].level) · 밥알 \(damagochi[selected].rice)개 · 물방울 \(damagochi[selected].water)개"
         
-        // 글자를 느리게 가져오는 문제 
+        dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 프로그래밍 명언이에요"
+        // 글자를 느리게 가져오는 문제
         if let line = dialogues?.randomElement() {
             print(line)
-            dialogueLabel.text = "\(line.en) - \(line.author)"
+            dialogueLabel.text = "\(UserDefaultsManager.bossName)님! 오늘의 프로그래밍 명언이에요: \(line.en) - \(line.author)"
             
         }
         
