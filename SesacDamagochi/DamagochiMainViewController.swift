@@ -96,8 +96,9 @@ class DamagochiMainViewController: UIViewController {
                     fatalError("잘못됨")
                 }
                 
-                if UserDefaultsManager.damagochiList[selected].level == 10 {
-                    // 축하 팝업 띄우기
+                if UserDefaultsManager.damagochiList[selected].level == 10 && UserDefaultsManager.damagochiList[selected].achieved == false {
+                    // 축하 팝업 한번만 띄우기 
+                    UserDefaultsManager.damagochiList[selected].achieved = true
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: CongratsViewController.identifier) as! CongratsViewController
                     
@@ -213,11 +214,11 @@ class DamagochiMainViewController: UIViewController {
         titleLabel.text = damagochi[selected].name
         statusLabel.text = "LV \(damagochi[selected].level) · 밥알 \(damagochi[selected].rice)개 · 물방울 \(damagochi[selected].water)개"
         
-        dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 프로그래밍 명언이에요"
+        dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 명언이에요"
         // 글자를 느리게 가져오는 문제
         if let line = dialogues?.randomElement() {
             print(line)
-            dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 프로그래밍 명언이에요: \(line.en) - \(line.author)"
+            dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 명언이에요\n\n \(line.en) \n- \(line.author)"
             
         }
         

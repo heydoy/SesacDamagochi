@@ -16,6 +16,8 @@ struct Damagochi: Codable {
     var rice: Int
     var water: Int
     
+    var achieved: Bool = false
+    
     var level: Int {
         let value = Int((rice/5)+(water/2))
         if value <= 1 {

@@ -354,93 +354,95 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-dc-bEH">
-                                <rect key="frame" x="256" y="612" width="94" height="84"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-fU-M1L">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="VfH-rc-efU"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="leaf.circle" catalog="system" title="밥주기">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="feedButtonTapped:" destination="UVL-DX-8LT" eventType="touchUpInside" id="PBE-61-gDV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlY-eo-RKA">
-                                        <rect key="frame" x="0.0" y="48" width="94" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="Cru-LS-Tqx"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="drop.circle" catalog="system" title="물주기">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="feedButtonTapped:" destination="UVL-DX-8LT" eventType="touchUpInside" id="Vz5-49-40D"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-mv-Fhz">
                                 <rect key="frame" x="188.5" y="567" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wqf-Iw-rUj">
-                                <rect key="frame" x="64" y="612" width="180" height="84"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GmN-Rd-qW9">
+                                <rect key="frame" x="52" y="612" width="310.5" height="84"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Yv-hO-uq6">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wqf-Iw-rUj">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="84"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Yv-hO-uq6">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="6PG-Hw-hG4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="enteredOnTextField:" destination="UVL-DX-8LT" eventType="editingDidEndOnExit" id="FY3-mc-FjP"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-vN-cWl">
+                                                <rect key="frame" x="0.0" y="48" width="180" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="RQO-UY-gKf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="enteredOnTextField:" destination="UVL-DX-8LT" eventType="editingDidEndOnExit" id="I6y-67-yyC"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="6PG-Hw-hG4"/>
+                                            <constraint firstAttribute="width" constant="180" id="2M2-ME-2Us"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="enteredOnTextField:" destination="UVL-DX-8LT" eventType="editingDidEndOnExit" id="FY3-mc-FjP"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-vN-cWl">
-                                        <rect key="frame" x="0.0" y="48" width="180" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="RQO-UY-gKf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="enteredOnTextField:" destination="UVL-DX-8LT" eventType="editingDidEndOnExit" id="I6y-67-yyC"/>
-                                        </connections>
-                                    </textField>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-dc-bEH">
+                                        <rect key="frame" x="192" y="0.0" width="118.5" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-fU-M1L">
+                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="VfH-rc-efU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="leaf.circle" catalog="system" title="밥주기">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="feedButtonTapped:" destination="UVL-DX-8LT" eventType="touchUpInside" id="PBE-61-gDV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlY-eo-RKA">
+                                                <rect key="frame" x="0.0" y="48" width="118.5" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="Cru-LS-Tqx"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="drop.circle" catalog="system" title="물주기">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="feedButtonTapped:" destination="UVL-DX-8LT" eventType="touchUpInside" id="Vz5-49-40D"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="2M2-ME-2Us"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="otm-Jh-ka7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wNW-dc-bEH" firstAttribute="leading" secondItem="wqf-Iw-rUj" secondAttribute="trailing" constant="12" id="1h5-ZJ-yQl"/>
-                            <constraint firstItem="wNW-dc-bEH" firstAttribute="bottom" secondItem="wqf-Iw-rUj" secondAttribute="bottom" id="2i2-b6-bQz"/>
                             <constraint firstItem="Zu5-JW-nMn" firstAttribute="centerX" secondItem="IMf-ig-JG7" secondAttribute="centerX" id="2yE-QM-dhV"/>
-                            <constraint firstItem="otm-Jh-ka7" firstAttribute="trailing" secondItem="wNW-dc-bEH" secondAttribute="trailing" constant="64" id="3ml-2h-Ydi"/>
+                            <constraint firstItem="GmN-Rd-qW9" firstAttribute="width" secondItem="Mc8-3s-Kla" secondAttribute="width" multiplier="0.75" id="5ok-dY-VPF"/>
                             <constraint firstItem="Zu5-JW-nMn" firstAttribute="width" secondItem="IMf-ig-JG7" secondAttribute="width" multiplier="0.861423" id="6zE-QQ-3p9"/>
                             <constraint firstItem="Zu5-JW-nMn" firstAttribute="centerY" secondItem="IMf-ig-JG7" secondAttribute="centerY" multiplier="0.95" id="7g2-nG-Zdj"/>
-                            <constraint firstItem="wqf-Iw-rUj" firstAttribute="top" secondItem="2TD-mv-Fhz" secondAttribute="bottom" constant="27" id="D7X-eR-2u6"/>
                             <constraint firstItem="AzG-kf-zyC" firstAttribute="centerX" secondItem="viJ-8q-dPA" secondAttribute="centerX" id="Mlq-hx-363"/>
+                            <constraint firstItem="GmN-Rd-qW9" firstAttribute="centerX" secondItem="otm-Jh-ka7" secondAttribute="centerX" id="WmQ-HH-aLF"/>
+                            <constraint firstItem="GmN-Rd-qW9" firstAttribute="top" secondItem="2TD-mv-Fhz" secondAttribute="bottom" constant="27" id="eeT-mi-PKe"/>
                             <constraint firstItem="IMf-ig-JG7" firstAttribute="width" secondItem="Mc8-3s-Kla" secondAttribute="width" multiplier="0.644928" id="f9Q-t2-q82"/>
                             <constraint firstItem="viJ-8q-dPA" firstAttribute="width" secondItem="Mc8-3s-Kla" secondAttribute="width" multiplier="0.555556" id="fGI-Zq-INJ"/>
                             <constraint firstItem="2TD-mv-Fhz" firstAttribute="top" secondItem="AzG-kf-zyC" secondAttribute="bottom" constant="8" symbolic="YES" id="hG9-rK-i7V"/>
                             <constraint firstItem="IMf-ig-JG7" firstAttribute="top" secondItem="otm-Jh-ka7" secondAttribute="top" constant="60" id="iZT-dn-Wrw"/>
-                            <constraint firstItem="wNW-dc-bEH" firstAttribute="top" secondItem="wqf-Iw-rUj" secondAttribute="top" id="ixF-xI-MrN"/>
                             <constraint firstItem="2TD-mv-Fhz" firstAttribute="centerX" secondItem="AzG-kf-zyC" secondAttribute="centerX" id="j1l-Hv-vtL"/>
                             <constraint firstItem="viJ-8q-dPA" firstAttribute="centerX" secondItem="otm-Jh-ka7" secondAttribute="centerX" id="m7H-W8-MfK"/>
-                            <constraint firstItem="wqf-Iw-rUj" firstAttribute="leading" secondItem="otm-Jh-ka7" secondAttribute="leading" constant="64" id="nKV-hQ-Cnh"/>
                             <constraint firstItem="IMf-ig-JG7" firstAttribute="centerX" secondItem="otm-Jh-ka7" secondAttribute="centerX" id="r9R-AS-AK5"/>
                             <constraint firstItem="viJ-8q-dPA" firstAttribute="top" secondItem="IMf-ig-JG7" secondAttribute="bottom" constant="16" id="uLk-QF-u3P"/>
                             <constraint firstItem="AzG-kf-zyC" firstAttribute="top" secondItem="viJ-8q-dPA" secondAttribute="bottom" constant="16.5" id="uxv-6F-LlD"/>
@@ -465,10 +467,11 @@
         <scene sceneID="VNS-G6-tUi">
             <objects>
                 <tableViewController storyboardIdentifier="SettingTableViewController" id="cSu-sg-YNx" customClass="SettingTableViewController" customModule="SesacDamagochi" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="B5M-NN-noF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="B5M-NN-noF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="DamagochiBackgroundColor"/>
+                        <color key="separatorColor" systemColor="opaqueSeparatorColor"/>
                         <sections>
                             <tableViewSection id="eNQ-mq-ugZ">
                                 <cells>
@@ -619,6 +622,9 @@
         <namedColor name="DamagochiFontAndBorderColor">
             <color red="0.30196078431372547" green="0.41568627450980394" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
