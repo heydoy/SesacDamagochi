@@ -19,7 +19,7 @@ struct Damagochi: Codable {
     var achieved: Bool = false
     
     var level: Int {
-        let value = Int((rice/5)+(water/2))
+        let value = Int((rice/5)+(water/2))/10
         if value <= 1 {
             return 1
         } else if value > 1 && value < 10 {
