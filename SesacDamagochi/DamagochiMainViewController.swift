@@ -47,7 +47,7 @@ class DamagochiMainViewController: UIViewController {
         })
         
        // 네비게이션 속성
-        navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
+        //navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
         navigationItem.backButtonTitle = ""
         
@@ -155,9 +155,9 @@ class DamagochiMainViewController: UIViewController {
         
         // 라벨 폰트
         titleLabel.font = .boldSystemFont(ofSize: 15)
-        titleLabel.layer.borderWidth = 1
+        titleLabel.layer.borderWidth = 2
         titleLabel.layer.borderColor = UIColor.DamagochiFontAndBorderColor.cgColor
-        titleLabel.layer.cornerRadius = 12
+        titleLabel.layer.cornerRadius = 8
         
         // 텍스트필드
         riceTextField.placeholder = "밥주세용"

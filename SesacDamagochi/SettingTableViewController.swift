@@ -21,10 +21,8 @@ class SettingTableViewController: UITableViewController {
         view.backgroundColor = .DamagochiBackgroundColor
         navigationItem.title = "설정"
         
-        
-        bossName.text = UserDefaultsManager.bossName
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
