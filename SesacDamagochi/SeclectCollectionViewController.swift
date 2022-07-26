@@ -27,7 +27,7 @@ class SeclectCollectionViewController: UICollectionViewController {
     
     func configure(){
         
-        self.view.backgroundColor = UIColor.DamagochiBackgroundColor
+        collectionView.backgroundColor = UIColor.DamagochiBackgroundColor
         
         if UserDefaultsManager.isDamagochiSelected {
             // 다마고치가 선택됐다면
@@ -42,9 +42,7 @@ class SeclectCollectionViewController: UICollectionViewController {
 
     }
     
-    func damagochiConfigure() {
-        
-    }
+
     
     
     

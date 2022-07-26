@@ -81,12 +81,24 @@ class DetailPopupViewController: UIViewController {
         // 글자 및 버튼글자 색상
         titleLabel.textColor = UIColor.DamagochiFontAndBorderColor
         overviewLabel.textColor = UIColor.DamagochiFontAndBorderColor
-        
+        titleLabel.layer.cornerRadius = 8
+        titleLabel.layer.borderWidth = 1
+        titleLabel.layer.borderColor = UIColor.DamagochiFontAndBorderColor.cgColor
         
         
         // 버튼
         // - 버튼은 조건따라 시작하기 또는 변경하기로 바꾸어야함
-        
+        if UserDefaultsManager.isDamagochiSelected {
+            // 다마고치가 선택됐다면
+            // 네비게이션 컨트롤러 설정
+            self.startButtonLabel = "변경하기"
+            
+        } else {
+            // 다마고치를 선택한 적 없다면
+            // 네비게이션 컨트롤러 설정
+            self.startButtonLabel = "시작하기"
+        }
+
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.backgroundColor = UIColor.systemGray5
         cancelButton.tintColor = .DamagochiFontAndBorderColor

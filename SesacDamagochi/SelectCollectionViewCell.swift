@@ -20,7 +20,14 @@ class SelectCollectionViewCell: UICollectionViewCell {
     func configure(_ damagochi: Damagochi) {
         // 디자인
         titleLabel.text = damagochi.name
+        titleLabel.textColor = UIColor.DamagochiFontAndBorderColor
+        titleLabel.font = .systemFont(ofSize: 12)
         imageView.image = UIImage(named: damagochi.thumnailImage)
+        
+        titleLabel.layer.cornerRadius = 8
+        titleLabel.layer.borderWidth = 1
+        titleLabel.layer.borderColor = UIColor.DamagochiFontAndBorderColor.cgColor
+        
     }
     
 }

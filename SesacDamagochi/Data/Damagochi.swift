@@ -57,25 +57,25 @@ struct Damagochis: Codable {
     var items: [Damagochi] = [
         Damagochi(
             id: 1,
-            name: "따끔따끔 다마고치",
+            name: " 따끔따끔 다마고치 ",
             overview: "저는 선인장 다마고치에요. 키는 150cm, 몸무게는 30kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
             rice: 0,
             water: 0),
         Damagochi(
             id: 2,
-            name: "방실방실 다마고치",
+            name: " 방실방실 다마고치 ",
             overview: "저는 햇님 다마고치에요. 키는 300cm, 몸무게는 130kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
             rice: 0,
             water: 0),
         Damagochi(
             id: 3,
-            name: "반짝반짝 다마고치",
+            name: " 반짝반짝 다마고치 ",
             overview: "저는 별님 다마고치에요. 키는 120cm, 몸무게는 40kg 이에요. 외강내유에요. 열심히 잘 자라보겟습니다. 주인님!",
             rice: 0,
             water: 0),
         Damagochi(
             id: 4,
-            name: "준비중이에요",
+            name: " 준비중이에요 ",
             overview: "",
             rice: 0,
             water: 0)
