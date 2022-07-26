@@ -60,7 +60,7 @@ class DetailPopupViewController: UIViewController {
         nav.modalTransitionStyle = .crossDissolve
         
         
-        //
+        // -- 윈도우 루트뷰로 바꿔서 쌓인 화면 제거 
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
                 
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
