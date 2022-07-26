@@ -328,19 +328,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-1" translatesAutoresizingMaskIntoConstraints="NO" id="viJ-8q-dPA">
-                                <rect key="frame" x="92" y="294.5" width="230" height="230"/>
+                                <rect key="frame" x="92" y="266.5" width="230" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="viJ-8q-dPA" secondAttribute="height" multiplier="1:1" id="r3E-Co-HcE"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="IMf-ig-JG7">
-                                <rect key="frame" x="73.5" y="104" width="267" height="174.5"/>
+                                <rect key="frame" x="73.5" y="76" width="267" height="174.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IMf-ig-JG7" secondAttribute="height" multiplier="26:17" id="pTR-eM-EJw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu5-JW-nMn">
-                                <rect key="frame" x="92" y="125" width="230" height="113"/>
+                                <rect key="frame" x="92" y="98.5" width="230" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zu5-JW-nMn" secondAttribute="height" multiplier="230:113" id="glD-gv-Yli"/>
                                 </constraints>
@@ -349,7 +349,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방실방실 다마고치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzG-kf-zyC">
-                                <rect key="frame" x="142" y="541" width="130" height="40"/>
+                                <rect key="frame" x="142" y="513" width="130" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="JoF-zm-Qhl"/>
                                     <constraint firstAttribute="height" constant="40" id="oK2-jS-g03"/>
@@ -359,13 +359,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-mv-Fhz">
-                                <rect key="frame" x="188.5" y="589" width="37.5" height="18"/>
+                                <rect key="frame" x="188.5" y="561" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="GmN-Rd-qW9">
-                                <rect key="frame" x="52" y="634" width="310.5" height="84"/>
+                                <rect key="frame" x="52" y="606" width="310.5" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wqf-Iw-rUj">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="84"/>
@@ -444,7 +444,7 @@
                             <constraint firstItem="IMf-ig-JG7" firstAttribute="width" secondItem="Mc8-3s-Kla" secondAttribute="width" multiplier="0.644928" id="f9Q-t2-q82"/>
                             <constraint firstItem="viJ-8q-dPA" firstAttribute="width" secondItem="Mc8-3s-Kla" secondAttribute="width" multiplier="0.555556" id="fGI-Zq-INJ"/>
                             <constraint firstItem="2TD-mv-Fhz" firstAttribute="top" secondItem="AzG-kf-zyC" secondAttribute="bottom" constant="8" symbolic="YES" id="hG9-rK-i7V"/>
-                            <constraint firstItem="IMf-ig-JG7" firstAttribute="top" secondItem="otm-Jh-ka7" secondAttribute="top" constant="60" id="iZT-dn-Wrw"/>
+                            <constraint firstItem="IMf-ig-JG7" firstAttribute="top" secondItem="otm-Jh-ka7" secondAttribute="top" constant="32" id="iZT-dn-Wrw"/>
                             <constraint firstItem="2TD-mv-Fhz" firstAttribute="centerX" secondItem="AzG-kf-zyC" secondAttribute="centerX" id="j1l-Hv-vtL"/>
                             <constraint firstItem="viJ-8q-dPA" firstAttribute="centerX" secondItem="otm-Jh-ka7" secondAttribute="centerX" id="m7H-W8-MfK"/>
                             <constraint firstItem="IMf-ig-JG7" firstAttribute="centerX" secondItem="otm-Jh-ka7" secondAttribute="centerX" id="r9R-AS-AK5"/>
