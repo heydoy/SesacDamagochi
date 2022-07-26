@@ -29,22 +29,18 @@ class SeclectCollectionViewController: UICollectionViewController {
         
         collectionView.backgroundColor = UIColor.DamagochiBackgroundColor
         
-        if UserDefaultsManager.isDamagochiSelected {
-            // 다마고치가 선택됐다면
-            // 네비게이션 컨트롤러 설정
-            self.navigationItem.title = "다마고치 변경하기"
-            
-        } else {
+        switch UserDefaultsManager.status {
+        case .start :
             // 다마고치를 선택한 적 없다면
             // 네비게이션 컨트롤러 설정
             self.navigationItem.title = "다마고치 선택하기"
+        case .edit :
+            // 다마고치가 선택됐다면
+            // 네비게이션 컨트롤러 설정
+            self.navigationItem.title = "다마고치 변경하기"
         }
-
     }
-    
 
-    
-    
     
     // MARK: - CollectionView Initialise
     
@@ -88,16 +84,17 @@ class SeclectCollectionViewController: UICollectionViewController {
             
             vc.modalTransitionStyle = .crossDissolve
             
-            if UserDefaultsManager.isDamagochiSelected {
-                // 다마고치가 선택됐다면
-                vc.startButtonLabel = "변경하기"
-                
-            } else {
+            
+            switch UserDefaultsManager.status {
+            case .start :
                 // 다마고치를 선택한 적 없다면
                 vc.startButtonLabel = "시작하기"
+            case .edit :
+                // 다마고치가 선택됐다면
+                vc.startButtonLabel = "변경하기"
             }
-            
-           
+
+
             vc.damagochi = UserDefaultsManager.damagochiList[indexPath.item]
             
             

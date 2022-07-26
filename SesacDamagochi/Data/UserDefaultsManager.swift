@@ -64,8 +64,8 @@ struct UserDefaultsManager {
     @UserDefaultWrapper(key: "damagochiList", defaultValue: Damagochis().items)
     static var damagochiList: [Damagochi]
     
-    @UserDefault(key: "isDamagochiSelected", defaultValue: false)
-    static var isDamagochiSelected: Bool
+    @UserDefaultWrapper(key: "status", defaultValue: Status.start)
+    static var status: Status
     
     @UserDefault(key: "SelectedDamagochiID", defaultValue: 0)
     static var SelectedDamagochiId: Int
@@ -80,4 +80,10 @@ public func cleanCompleteStorage(){
         UserDefaults.standard.removePersistentDomain(forName: bundleID)
     }
     
+}
+
+
+enum Status: Codable {
+    case start
+    case edit
 }

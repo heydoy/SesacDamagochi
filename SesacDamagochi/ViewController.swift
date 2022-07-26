@@ -41,13 +41,16 @@ class ViewController: UIViewController {
             
             // 다마고치 선택했는지 여부 체크하기
             
-            if UserDefaultsManager.isDamagochiSelected {
-                // 다마고치가 선택됐다면 메인 보여주기
-                self.concierge(DamagochiMainViewController.identifier)
-            } else {
+            switch UserDefaultsManager.status {
+            case .start :
                 // 다마고치를 선택한 적 없다면 선택화면 보여주기
                 self.concierge(SeclectCollectionViewController.identifier)
+            case .edit :
+                // 다마고치가 선택됐다면 메인 보여주기
+                self.concierge(DamagochiMainViewController.identifier)
             }
+            
+
         }
         
         

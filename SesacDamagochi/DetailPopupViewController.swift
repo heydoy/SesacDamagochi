@@ -44,7 +44,7 @@ class DetailPopupViewController: UIViewController {
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         // 선택완료 설정 후, 다마고치 선택된 아이디 설정, 화면 전환
-        UserDefaultsManager.isDamagochiSelected = true
+        UserDefaultsManager.status = .edit
         
         if let id = damagochi?.id {
             UserDefaultsManager.SelectedDamagochiId = id
@@ -96,15 +96,16 @@ class DetailPopupViewController: UIViewController {
         
         // 버튼
         // - 버튼은 조건따라 시작하기 또는 변경하기로 바꾸어야함
-        if UserDefaultsManager.isDamagochiSelected {
-            // 다마고치가 선택됐다면
-            // 네비게이션 컨트롤러 설정
-            self.startButtonLabel = "변경하기"
-            
-        } else {
+        switch UserDefaultsManager.status {
+        case .start :
             // 다마고치를 선택한 적 없다면
             // 네비게이션 컨트롤러 설정
             self.startButtonLabel = "시작하기"
+            
+        case .edit :
+            // 다마고치가 선택됐다면
+            // 네비게이션 컨트롤러 설정
+            self.startButtonLabel = "변경하기"
         }
 
         cancelButton.setTitle("취소", for: .normal)
