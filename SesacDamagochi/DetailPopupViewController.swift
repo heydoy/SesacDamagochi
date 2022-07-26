@@ -84,10 +84,11 @@ class DetailPopupViewController: UIViewController {
         popupView.backgroundColor = UIColor.DamagochiBackgroundColor
         
         // 이미지 레이어
-        imageView.layer.cornerRadius = imageView.frame.width/2
+        //imageView.layer.cornerRadius = imageView.frame.width/2
         
         // 글자 및 버튼글자 색상
         titleLabel.textColor = UIColor.DamagochiFontAndBorderColor
+        titleLabel.font = .systemFont(ofSize: 12, weight: .semibold)
         overviewLabel.textColor = UIColor.DamagochiFontAndBorderColor
         titleLabel.layer.cornerRadius = 8
         titleLabel.layer.borderWidth = 1
