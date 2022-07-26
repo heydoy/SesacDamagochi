@@ -59,8 +59,16 @@ class DetailPopupViewController: UIViewController {
         nav.modalPresentationStyle = .fullScreen
         nav.modalTransitionStyle = .crossDissolve
         
+        
+        //
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+                
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        sceneDelegate?.window?.rootViewController = nav
+        
         self.present(nav, animated: true)
         
+
         
     }
     
