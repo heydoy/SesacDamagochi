@@ -16,7 +16,7 @@ class DamagochiMainViewController: UIViewController {
     
     let selected = UserDefaultsManager.SelectedDamagochiId - 1
     
-    // - Outlet
+    // - Outlet Variable
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var dialogueLabel: UILabel!
@@ -44,9 +44,7 @@ class DamagochiMainViewController: UIViewController {
                case let .failure(error) :
                    debugPrint("error \(error)")
            }
-            
         })
-        
         
        // 네비게이션 속성
         navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
@@ -73,7 +71,6 @@ class DamagochiMainViewController: UIViewController {
         
         var text = sender.text ?? ""
         text = text == "" ? "1" : text
-        
         
         if let intText = Int(text) {
             
@@ -106,18 +103,14 @@ class DamagochiMainViewController: UIViewController {
                     vc.modalTransitionStyle = .crossDissolve
                     
                     self.present(vc, animated: true)
-                    
                 }
             }
             
         } else {
             self.view.makeToast("숫자만 입력해주세요")
         }
-
     }
-    
 
-    
 
     @IBAction func feedButtonTapped(_ sender: UIButton) {
         
@@ -129,7 +122,6 @@ class DamagochiMainViewController: UIViewController {
         default :
             fatalError("잘못됨")
         }
-
     }
 
     
@@ -205,6 +197,7 @@ class DamagochiMainViewController: UIViewController {
         
     }
     
+    // 다마고치 상태, 말풍선
     func dataConfig() {
         
         let damagochi = UserDefaultsManager.damagochiList
@@ -224,11 +217,11 @@ class DamagochiMainViewController: UIViewController {
         
     }
     
-    // 검색
+    
+    // 다마고치 말풍선: 명언 가져오기
     func fetchResult( completionHandler: @escaping (Result<[Dialogue], Error>)-> Void ) {
         let url = "https://programming-quotes-api.herokuapp.com/quotes"
 
-        
         AF.request(url, method: .get)
         
         .responseData(completionHandler: { response in
@@ -248,10 +241,5 @@ class DamagochiMainViewController: UIViewController {
 
         })
     }
-
-
-
-
-
 
 }
