@@ -82,5 +82,9 @@ class SettingTableViewController: UITableViewController {
             fatalError("잘못됨")
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        0
+    }
 
 }

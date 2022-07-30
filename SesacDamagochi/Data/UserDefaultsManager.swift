@@ -61,7 +61,7 @@ struct UserDefault<T> {
 }
 
 struct UserDefaultsManager {
-    @UserDefaultWrapper(key: "damagochiList", defaultValue: Damagochis().items)
+    @UserDefaultWrapper(key: "damagochiList", defaultValue: Damagochis.items)
     static var damagochiList: [Damagochi]
     
     @UserDefaultWrapper(key: "status", defaultValue: Status.start)

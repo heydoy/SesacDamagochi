@@ -475,7 +475,7 @@
         <scene sceneID="VNS-G6-tUi">
             <objects>
                 <tableViewController storyboardIdentifier="SettingTableViewController" id="cSu-sg-YNx" customClass="SettingTableViewController" customModule="SesacDamagochi" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="B5M-NN-noF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="B5M-NN-noF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="DamagochiBackgroundColor"/>
@@ -612,10 +612,6 @@
             <point key="canvasLocation" x="2950.7246376811595" y="800.89285714285711"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="6n0-Fj-vSd"/>
-        <designable name="oEe-ej-BH3"/>
-    </designables>
     <resources>
         <image name="1-1" width="152" height="151"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>

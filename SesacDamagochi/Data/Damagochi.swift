@@ -54,7 +54,7 @@ struct Damagochi: Codable {
 
 // 다마고치 모음
 struct Damagochis: Codable {
-    var items: [Damagochi] = [
+   static var  items: [Damagochi] = [
         Damagochi(
             id: 1,
             name: " 따끔따끔 다마고치 ",
