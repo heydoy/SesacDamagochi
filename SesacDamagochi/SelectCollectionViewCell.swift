@@ -21,7 +21,7 @@ class SelectCollectionViewCell: UICollectionViewCell {
         // 디자인
         titleLabel.text = damagochi.name
         titleLabel.textColor = UIColor.DamagochiFontAndBorderColor
-        titleLabel.font = .systemFont(ofSize: 11)
+        titleLabel.font = .CustomFont(size: 11, family: .medium)
         imageView.image = UIImage(named: damagochi.thumnailImage)
         
         titleLabel.layer.cornerRadius = 8

@@ -152,7 +152,8 @@ class DamagochiMainViewController: UIViewController {
         statusLabel.textColor = .DamagochiFontAndBorderColor
         
         // 라벨 폰트
-        titleLabel.font = .boldSystemFont(ofSize: 15)
+        dialogueLabel.font = .CustomFont(size: 11)
+        titleLabel.font = .CustomFont(size: 13, family: .medium)
         titleLabel.layer.borderWidth = 2
         titleLabel.layer.borderColor = UIColor.DamagochiFontAndBorderColor.cgColor
         titleLabel.layer.cornerRadius = 8
@@ -208,6 +209,8 @@ class DamagochiMainViewController: UIViewController {
 
 
         imageView.image = UIImage(named: damagochi[selected].image)
+        
+        
         titleLabel.text = damagochi[selected].name
         statusLabel.text = "LV \(damagochi[selected].level) · 밥알 \(damagochi[selected].rice)개 · 물방울 \(damagochi[selected].water)개"
         

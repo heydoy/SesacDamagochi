@@ -88,7 +88,7 @@ class DetailPopupViewController: UIViewController {
         
         // 글자 및 버튼글자 색상
         titleLabel.textColor = UIColor.DamagochiFontAndBorderColor
-        titleLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+        titleLabel.font = .CustomFont(size: 12, family: .bold)
         overviewLabel.textColor = UIColor.DamagochiFontAndBorderColor
         titleLabel.layer.cornerRadius = 8
         titleLabel.layer.borderWidth = 1

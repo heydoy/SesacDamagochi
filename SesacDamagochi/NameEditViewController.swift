@@ -37,7 +37,7 @@ class NameEditViewController: UIViewController {
     func saveButtonTapped() {
         // 유효성 체크, 저장하고 사라지기
         
-        if let name = newBossName, name != "", (2...6).contains(name.count) {
+        if let name = newBossName, !name.isEmpty , (2...6).contains(name.count) {
             //묻기
             let alert = UIAlertController(title: "보스 이름 변경", message: "보스 이름을 \(bossName)에서 \(name)으로 바꾸시겠습니까?", preferredStyle: .alert)
             let ok = UIAlertAction(title: "네, 바꿉니다", style: .default) { (action) in
@@ -75,6 +75,7 @@ class NameEditViewController: UIViewController {
         
         userTextField.addOnlyBottomBorder()
         userTextField.placeholder = "대장님의 바꿀 이름을 입력해주세요"
+        userTextField.font = .CustomFont(size: 12)
         userTextField.text = bossName
         userTextField.textColor = .DamagochiFontAndBorderColor
         

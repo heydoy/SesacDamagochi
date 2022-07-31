@@ -11,6 +11,10 @@
 		A2130377288CF71F0022683C /* SeclectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */; };
 		A2130379288CF74C0022683C /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */; };
 		A22F7A39288C2D4700214EA3 /* rabbit-hatching.json in Resources */ = {isa = PBXBuildFile; fileRef = A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */; };
+		A246BFCC2896BA5800BE564C /* SCDream2.otf in Resources */ = {isa = PBXBuildFile; fileRef = A246BFC92896BA3B00BE564C /* SCDream2.otf */; };
+		A246BFCD2896BA5800BE564C /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = A246BFCB2896BA3C00BE564C /* SCDream5.otf */; };
+		A246BFCE2896BA5800BE564C /* SCDream8.otf in Resources */ = {isa = PBXBuildFile; fileRef = A246BFCA2896BA3C00BE564C /* SCDream8.otf */; };
+		A246BFD02896BAB700BE564C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246BFCF2896BAB700BE564C /* UIFont+Extension.swift */; };
 		A2592E15288C1CA0009EBB4F /* Damagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E14288C1CA0009EBB4F /* Damagochi.swift */; };
 		A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E16288C2169009EBB4F /* UIColor+Extension.swift */; };
 		A2592E1B288C2451009EBB4F /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2592E1A288C2451009EBB4F /* Dialogue.swift */; };
@@ -38,6 +42,10 @@
 		A2130376288CF71F0022683C /* SeclectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeclectCollectionViewController.swift; sourceTree = "<group>"; };
 		A2130378288CF74C0022683C /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rabbit-hatching.json"; sourceTree = "<group>"; };
+		A246BFC92896BA3B00BE564C /* SCDream2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream2.otf; sourceTree = "<group>"; };
+		A246BFCA2896BA3C00BE564C /* SCDream8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream8.otf; sourceTree = "<group>"; };
+		A246BFCB2896BA3C00BE564C /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		A246BFCF2896BAB700BE564C /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		A2592E14288C1CA0009EBB4F /* Damagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damagochi.swift; sourceTree = "<group>"; };
 		A2592E16288C2169009EBB4F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A2592E1A288C2451009EBB4F /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
@@ -83,6 +91,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A246BFC82896B9B000BE564C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A246BFC92896BA3B00BE564C /* SCDream2.otf */,
+				A246BFCB2896BA3C00BE564C /* SCDream5.otf */,
+				A246BFCA2896BA3C00BE564C /* SCDream8.otf */,
+				A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */,
+				A2722E80288DA6F900971886 /* congrats.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A2592E13288C1C8A009EBB4F /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +117,7 @@
 			children = (
 				A2592E16288C2169009EBB4F /* UIColor+Extension.swift */,
 				A2722E78288D68D000971886 /* UITextField+Extension.swift */,
+				A246BFCF2896BAB700BE564C /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -132,8 +153,7 @@
 		A2CFAA77288A8A9800FBEC52 /* SesacDamagochi */ = {
 			isa = PBXGroup;
 			children = (
-				A22F7A38288C2D4700214EA3 /* rabbit-hatching.json */,
-				A2722E80288DA6F900971886 /* congrats.json */,
+				A246BFC82896B9B000BE564C /* Resources */,
 				A2592E13288C1C8A009EBB4F /* App */,
 				A2CFAA7C288A8A9800FBEC52 /* ViewController.swift */,
 				A2CFAA7E288A8A9800FBEC52 /* Main.storyboard */,
@@ -229,6 +249,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A246BFCC2896BA5800BE564C /* SCDream2.otf in Resources */,
+				A246BFCD2896BA5800BE564C /* SCDream5.otf in Resources */,
+				A246BFCE2896BA5800BE564C /* SCDream8.otf in Resources */,
 				A22F7A39288C2D4700214EA3 /* rabbit-hatching.json in Resources */,
 				A2CFAA85288A8A9900FBEC52 /* LaunchScreen.storyboard in Resources */,
 				A2CFAA82288A8A9900FBEC52 /* Assets.xcassets in Resources */,
@@ -300,6 +323,7 @@
 				A2722E83288DAB5800971886 /* UserDefaultsManager.swift in Sources */,
 				A2592E17288C2169009EBB4F /* UIColor+Extension.swift in Sources */,
 				A2FA41B2288D1F150065656B /* DetailPopupViewController.swift in Sources */,
+				A246BFD02896BAB700BE564C /* UIFont+Extension.swift in Sources */,
 				A2722E7F288DA46B00971886 /* CongratsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
