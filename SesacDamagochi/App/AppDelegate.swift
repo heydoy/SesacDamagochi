@@ -9,7 +9,7 @@ import UIKit
 import IQKeyboardManagerSwift
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
@@ -17,7 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         
+        // launch screen 띄뭔 쌓인 노티 모두 지우기
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        
+        // foreground 상태일때도 받게하기 위해 delegate 설정
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
+    }
+    
+    // foreground에서도 present됨 
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list, .banner, .sound, .badge])
     }
 
     // MARK: UISceneSession Lifecycle

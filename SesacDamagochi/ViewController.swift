@@ -20,14 +20,22 @@ import Lottie
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
+    
     static let identifier = "LaunchScreen"
 
     @IBOutlet weak var viewForLottie: AnimationView!
     
+    // Notification
+    let notificationCenter = UNUserNotificationCenter.current()
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // Notification 요청
+        requestAuthorization()
         
         // animationView
         viewForLottie.frame = self.view.bounds
@@ -58,6 +66,8 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: - Helpers
+    // - Design
     func concierge(_ identifier: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -83,6 +93,43 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    // - Notification
+    func requestAuthorization () {
+        
+        let authorizationOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
+        
+        notificationCenter.requestAuthorization(options: authorizationOptions) { success, error in
+            if success {
+                self.sendNotification()
+            }
+        }
+    }
+    
+    func sendNotification() {
+        
+        // 콘텐트
+        let notificationContent = UNMutableNotificationContent() // mutable 없으면 get-only임
+        
+        notificationContent.title = "🐱안뇽하세요 주인님"
+        notificationContent.body = "저 배고파요. 키워주새오 "
+        notificationContent.subtitle = "오늘 행운의 숫자는 \(Int.random(in: 1...45))"
+        
+        notificationContent.badge = 1
+        
+        // 1시간에 한 번씩
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3600, repeats: true)
+        
+        // 트리거 - 캘린더
+
+        let request = UNNotificationRequest(identifier: "\(Date())", content: notificationContent, trigger: trigger)
+        
+        
+        // 알림센터에 추가
+        notificationCenter.add(request)
+
+    }
+    
 
 
 }
