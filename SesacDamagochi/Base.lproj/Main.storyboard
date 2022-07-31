@@ -612,6 +612,10 @@
             <point key="canvasLocation" x="2950.7246376811595" y="800.89285714285711"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6n0-Fj-vSd"/>
+        <designable name="oEe-ej-BH3"/>
+    </designables>
     <resources>
         <image name="1-1" width="152" height="151"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>

@@ -29,6 +29,7 @@ class DamagochiMainViewController: UIViewController {
     @IBOutlet weak var riceButton: UIButton!
     @IBOutlet weak var waterButton: UIButton!
     
+
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -47,12 +48,12 @@ class DamagochiMainViewController: UIViewController {
         })
         
        // 네비게이션 속성
-        //navigationItem.title = "\(UserDefaultsManager.bossName)의 다마고치"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
-        navigationItem.backButtonTitle = ""
+        navigationItem.backButtonTitle = .none
+        self.navigationController?.navigationBar.backgroundColor = .DamagochiBackgroundColor
         
         // 화면 디자인
-        
+
         configure()
         dataConfig()
         
@@ -69,10 +70,11 @@ class DamagochiMainViewController: UIViewController {
     
     @IBAction func enteredOnTextField(_ sender: UITextField) {
         
-        var text = sender.text ?? ""
-        text = text == "" ? "1" : text
+        guard let text = sender.text else { return }
         
-        if let intText = Int(text) {
+        let stringText = text.isEmpty ? "1" : text
+        
+        if let intText = Int(stringText) {
             
             if intText >= 100 {
                 self.view.makeToast("다마고치는 99개까지 먹을 수 있어요ㅠ")
@@ -80,17 +82,13 @@ class DamagochiMainViewController: UIViewController {
                 // 내용을 더하기
                 switch sender {
                 case riceTextField :
-                    print(intText)
-                    print("밥 욤욤")
                     UserDefaultsManager.damagochiList[selected].rice += intText
                     dataConfig()
                 case waterTextField:
-                    print(intText)
-                    print("물 욤욤")
                     UserDefaultsManager.damagochiList[selected].water += intText
                     dataConfig()
                 default:
-                    fatalError("잘못됨")
+                    assert(false)
                 }
                 
                 if UserDefaultsManager.damagochiList[selected].level == 10 && UserDefaultsManager.damagochiList[selected].achieved == false {
@@ -120,7 +118,7 @@ class DamagochiMainViewController: UIViewController {
         case waterButton :
             enteredOnTextField(waterTextField)
         default :
-            fatalError("잘못됨")
+            assert(false)
         }
     }
 
@@ -200,6 +198,8 @@ class DamagochiMainViewController: UIViewController {
         waterButton.tintColor = .DamagochiFontAndBorderColor
         
     }
+
+    
     
     // 다마고치 상태, 말풍선
     func dataConfig() {
@@ -214,7 +214,6 @@ class DamagochiMainViewController: UIViewController {
         dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 명언이에요"
         // 글자를 느리게 가져오는 문제
         if let line = dialogues?.randomElement() {
-            print(line)
             dialogueLabel.text = "\(UserDefaultsManager.bossName)! 오늘의 명언이에요\n\n \(line.en) \n- \(line.author)"
             
         }
