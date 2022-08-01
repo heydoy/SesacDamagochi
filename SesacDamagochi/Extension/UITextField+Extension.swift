@@ -16,7 +16,7 @@ extension UITextField {
                                     y: frame.size.height-1,
                                     width: frame.size.width,
                                     height: 1)
-        bottomBorder.backgroundColor = UIColor.DamagochiFontAndBorderColor.cgColor
+        bottomBorder.backgroundColor = UIColor.damagochiFontAndBorderColor.cgColor
         borderStyle = .none
         layer.addSublayer(bottomBorder)
         

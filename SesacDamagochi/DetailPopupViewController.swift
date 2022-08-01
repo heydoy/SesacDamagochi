@@ -81,18 +81,18 @@ class DetailPopupViewController: UIViewController {
         // 팝업 레이어 둥글리기
         popupView.clipsToBounds = true
         popupView.layer.cornerRadius = 12
-        popupView.backgroundColor = UIColor.DamagochiBackgroundColor
+        popupView.backgroundColor = .damagochiBackgroundColor
         
         // 이미지 레이어
         //imageView.layer.cornerRadius = imageView.frame.width/2
         
         // 글자 및 버튼글자 색상
-        titleLabel.textColor = UIColor.DamagochiFontAndBorderColor
-        titleLabel.font = .CustomFont(size: 12)
-        overviewLabel.textColor = UIColor.DamagochiFontAndBorderColor
+        titleLabel.textColor = .damagochiFontAndBorderColor
+        titleLabel.font = .customFont(size: 12)
+        overviewLabel.textColor = .damagochiFontAndBorderColor
         titleLabel.layer.cornerRadius = 8
         titleLabel.layer.borderWidth = 1
-        titleLabel.layer.borderColor = UIColor.DamagochiFontAndBorderColor.cgColor
+        titleLabel.layer.borderColor = UIColor.damagochiFontAndBorderColor.cgColor
         
         
         // 버튼
@@ -111,10 +111,10 @@ class DetailPopupViewController: UIViewController {
 
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.backgroundColor = UIColor.systemGray5
-        cancelButton.tintColor = .DamagochiFontAndBorderColor
+        cancelButton.tintColor = .damagochiFontAndBorderColor
         
         startButton.setTitle("\(startButtonLabel)", for: .normal)
-        startButton.tintColor = .DamagochiFontAndBorderColor
+        startButton.tintColor = .damagochiFontAndBorderColor
     }
 
     // 내용

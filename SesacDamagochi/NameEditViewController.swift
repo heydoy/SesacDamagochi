@@ -71,13 +71,13 @@ class NameEditViewController: UIViewController {
     // MARK: - Helpers
     
     func configure() {
-        view.backgroundColor = .DamagochiBackgroundColor
+        view.backgroundColor = .damagochiBackgroundColor
         
         userTextField.addOnlyBottomBorder()
         userTextField.placeholder = "대장님의 바꿀 이름을 입력해주세요"
-        userTextField.font = .CustomFont(size: 12)
+        userTextField.font = .customFont(size: 12)
         userTextField.text = bossName
-        userTextField.textColor = .DamagochiFontAndBorderColor
+        userTextField.textColor = .damagochiFontAndBorderColor
         
         
     }

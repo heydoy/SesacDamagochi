@@ -22,7 +22,7 @@ extension UIFont {
             }
         }
     }
-    static func CustomFont(size: CGFloat, family: SCoreDream = .medium ) -> UIFont {
+    static func customFont(size: CGFloat, family: SCoreDream = .medium ) -> UIFont {
         return UIFont(name: family.getString(), size: size)!
         
     }

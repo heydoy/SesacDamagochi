@@ -27,7 +27,7 @@ class SeclectCollectionViewController: UICollectionViewController {
     
     func configure(){
         
-        collectionView.backgroundColor = UIColor.DamagochiBackgroundColor
+        collectionView.backgroundColor = .damagochiBackgroundColor
         
         switch UserDefaultsManager.status {
         case .start :

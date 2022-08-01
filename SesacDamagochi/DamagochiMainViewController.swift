@@ -50,7 +50,7 @@ class DamagochiMainViewController: UIViewController {
        // 네비게이션 속성
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(SettingButtonTapped))
         navigationItem.backButtonTitle = .none
-        self.navigationController?.navigationBar.backgroundColor = .DamagochiBackgroundColor
+        self.navigationController?.navigationBar.backgroundColor = .damagochiBackgroundColor
         
         // 화면 디자인
 
@@ -145,17 +145,17 @@ class DamagochiMainViewController: UIViewController {
     // - 화면 요소 디자인
     func configure() {
         // 배경색
-        self.view.backgroundColor = .DamagochiBackgroundColor
+        self.view.backgroundColor = .damagochiBackgroundColor
         // 라벨컬러
-        dialogueLabel.textColor = .DamagochiFontAndBorderColor
-        titleLabel.textColor = .DamagochiFontAndBorderColor
-        statusLabel.textColor = .DamagochiFontAndBorderColor
+        dialogueLabel.textColor = .damagochiFontAndBorderColor
+        titleLabel.textColor = .damagochiFontAndBorderColor
+        statusLabel.textColor = .damagochiFontAndBorderColor
         
         // 라벨 폰트
-        dialogueLabel.font = .CustomFont(size: 11)
-        titleLabel.font = .CustomFont(size: 13, family: .medium)
+        dialogueLabel.font = .customFont(size: 11)
+        titleLabel.font = .customFont(size: 13, family: .medium)
         titleLabel.layer.borderWidth = 2
-        titleLabel.layer.borderColor = UIColor.DamagochiFontAndBorderColor.cgColor
+        titleLabel.layer.borderColor = UIColor.damagochiFontAndBorderColor.cgColor
         titleLabel.layer.cornerRadius = 8
         
         // 텍스트필드
@@ -182,7 +182,7 @@ class DamagochiMainViewController: UIViewController {
         config.titleAlignment = .center
         config.contentInsets = NSDirectionalEdgeInsets.init(top: 5, leading: 4, bottom: 5, trailing: 4)
         config.imagePlacement = .leading
-        config.background.strokeColor = .DamagochiFontAndBorderColor
+        config.background.strokeColor = .damagochiFontAndBorderColor
         config.background.strokeWidth = 1.5
         
 
@@ -195,8 +195,8 @@ class DamagochiMainViewController: UIViewController {
         riceButton.setImage(UIImage(systemName: "leaf.circle"), for: .normal)
         waterButton.setImage(UIImage(systemName: "drop.circle"), for: .normal)
         
-        riceButton.tintColor = .DamagochiFontAndBorderColor
-        waterButton.tintColor = .DamagochiFontAndBorderColor
+        riceButton.tintColor = .damagochiFontAndBorderColor
+        waterButton.tintColor = .damagochiFontAndBorderColor
         
     }
 

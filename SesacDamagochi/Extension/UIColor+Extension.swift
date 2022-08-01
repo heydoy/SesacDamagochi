@@ -10,14 +10,14 @@ import UIKit
 extension UIColor {
     //static let DamagochiBackgroundColor = UIColor(named: "DamagochiBackgroundColor")
     
-    static let DamagochiBackgroundColor = UIColor(
+    static let damagochiBackgroundColor = UIColor(
         red: 245/255,
         green: 252/255,
         blue: 252/255,
         alpha: 1.0
     )
     
-    static let DamagochiFontAndBorderColor = UIColor(
+    static let damagochiFontAndBorderColor = UIColor(
         red: 77/255,
         green: 106/255,
         blue: 120/255,
